@@ -10,7 +10,7 @@
 ---
 
 **Тема:**  
-Команди Linux для управління процесами
+Знайомство з командами навігації по файловій системі та керування файлами та каталогами
 
 ---
 
@@ -41,7 +41,9 @@
 
 ## Мета роботи
 1. Отримання практичних навиків роботи з командною оболонкою Bash.
-2. Знайомство з базовими командами для управління процесами.
+2. Знайомство з базовими командами навігації по файловій системі.
+3. Знайомство з базовими командами для керування файлами та каталогами.
+
 
 ---
 
@@ -56,47 +58,47 @@
 ## Завдання для попередньої підготовки
 ### Glossary of Basic English Terms 
 
-**Filesystem – a hierarchical structure used by an operating system to organize and store files and directories.**
+**Filesystem - a hierarchical structure used by an operating system to organize and store files and directories.**
 
-**Root directory (/) – the top-level directory in Linux from which all other directories originate.**
+**Root directory (/) - the top-level directory in Linux from which all other directories originate.**
 
-**Home directory (~) – a personal directory assigned to a user account where personal files and settings are stored.**
+**Home directory (~) - a personal directory assigned to a user account where personal files and settings are stored.**
 
-**Current working directory – the directory in which the user is currently located in the command-line interface.**
+**Current working directory - the directory in which the user is currently located in the command-line interface.**
 
-**pwd (print working directory) – a command that displays the full path of the current working directory.**
+**pwd (print working directory) - a command that displays the full path of the current working directory.**
 
-**cd (change directory) – a command used to navigate between directories in the filesystem.**
+**cd (change directory) - a command used to navigate between directories in the filesystem.**
 
-**ls (list) – a command used to display the contents of a directory.**
+**ls (list) - a command used to display the contents of a directory.**
 
-**ls -l – an option of the ls command that displays directory contents in long format, including permissions, owner, size, and modification date.**
+**ls -l - an option of the ls command that displays directory contents in long format, including permissions, owner, size, and modification date.**
 
-**ls -a – an option of the ls command that displays all files, including hidden files.**
+**ls -a - an option of the ls command that displays all files, including hidden files.**
 
-**mkdir (make directory) – a command used to create a new directory.**
+**mkdir (make directory) - a command used to create a new directory.**
 
-**touch – a command used to create an empty file or update the timestamp of an existing file.**
+**touch - a command used to create an empty file or update the timestamp of an existing file.**
 
-**cp (copy) – a command used to copy files or directories from one location to another.**
+**cp (copy) - a command used to copy files or directories from one location to another.**
 
-**cp -r (recursive copy) – a command used to copy directories and their contents recursively.**
+**cp -r (recursive copy) - a command used to copy directories and their contents recursively.**
 
-**mv (move) – a command used to move files or directories and also to rename them.**
+**mv (move) - a command used to move files or directories and also to rename them.**
 
-**rm (remove) – a command used to delete files.**
+**rm (remove) - a command used to delete files.**
 
-**rm -r (recursive remove) – a command used to delete directories and their contents recursively.**
+**rm -r (recursive remove) - a command used to delete directories and their contents recursively.**
 
-**rmdir – a command used to delete an empty directory.**
+**rmdir - a command used to delete an empty directory.**
 
-**Globbing – a shell mechanism used to match filename patterns using wildcard characters.**
+**Globbing - a shell mechanism used to match filename patterns using wildcard characters.**
 
 **Wildcard - special characters such as `*`, `?`, and `[]` used to match patterns in filenames.**
 
-**Pipe (|) – a shell operator that passes the output of one command as input to another command.**
+**Pipe (|) - a shell operator that passes the output of one command as input to another command.**
 
-**Redirection (>, >>) – a shell feature used to redirect command output into a file, where “>” overwrites and “>>” appends to the file.**
+**Redirection (>, >>) - a shell feature used to redirect command output into a file, where “>” overwrites and “>>” appends to the file.**
 
 ## Відповіді на теоретичні питання
 
@@ -207,3 +209,173 @@ FHS (Filesystem Hierarchy Standard) - це стандарт, який визна
 | touch premove | Створює порожній файл premove. |
 | mv premove postmove | Переміщує або перейменовує файл premove у postmove. |
 | rm postmove | Видаляє файл postmove. |
+
+## 2. Робота в терміналі 
+### 2.1 Визначення поточного робочого каталогу
+
+Для визначення поточної робочої директорії було використано команду:
+```bash
+pwd
+```
+Команда pwd (print working directory) відображає повний шлях до каталогу, в якому наразі знаходиться користувач.
+
+<img width="337" height="102" alt="image" src="https://github.com/user-attachments/assets/79788283-57a0-48ea-9d1d-92b074f42497" />
+
+Рисунок 1 - Визначення поточного робочого каталогу.
+
+### 2.2 Перехід до кореневого каталогу
+
+Було виконано дві команди:
+```bash
+cd /
+pwd
+```
+Команда cd / здійснює перехід до кореневого каталогу файлової системи.
+Команда pwd підтверджує, що поточна директорія змінилася на /.
+
+<img width="377" height="115" alt="image" src="https://github.com/user-attachments/assets/0d64e271-2de8-4156-810d-8e9aebbc90ba" />
+
+Рисунок 2 - Перехід до кореневого каталогу.
+
+### 2.3 Перегляд вмісту каталогу у довгому форматі
+
+Для перегляду детальної інформації про файли використано:
+```bash
+ls -l
+```
+Ключ -l дозволяє відобразити:
+- права доступу,
+- власника,
+- групу,
+- розмір файлу,
+- дату останньої зміни.
+
+<img width="785" height="502" alt="image" src="https://github.com/user-attachments/assets/38ab49b9-5155-40fa-bb87-e3c0cca99b50" />
+
+Рисунок 3 - Перегляд каталогу у довгому форматі.
+
+### 2.4 Перехід до каталогу /usr/share
+
+Було виконано:
+```bash
+cd /usr/share
+pwd
+```
+Команда cd здійснює перехід до системного каталогу, а pwd підтверджує поточний шлях.
+
+<img width="435" height="108" alt="image" src="https://github.com/user-attachments/assets/92304dc9-c27d-4810-b02e-d4d414ca7bcf" />
+
+Рисунок 4 - Перехід до каталогу /usr/share.
+
+### 2.5 Перегляд прихованих файлів
+
+Для перегляду вмісту каталогу разом із прихованими файлами використано:
+```bash
+ls -a
+```
+Ключ -a відображає всі файли, включаючи приховані (їх назви починаються з символу .).
+
+<img width="641" height="570" alt="image" src="https://github.com/user-attachments/assets/7df20bcc-4444-48ae-959f-93399c14350f" />
+
+Рисунок 5 - Перегляд прихованих файлів.
+
+### 2.6 Перехід до каталогу /etc
+```bash
+cd /etc
+pwd
+```
+Каталог /etc містить системні конфігураційні файли.
+
+<img width="480" height="118" alt="image" src="https://github.com/user-attachments/assets/dfb97cef-5f3d-4d4b-8a76-3d92357a1fb4" />
+
+Рисунок 6 - Перехід до каталогу /etc.
+
+### 2.7 Вибірка файлів за першою літерою імені
+
+Оскільки ім’я - Yaroslava, використано:
+```bash
+ls y*
+```
+Символ * означає “будь-яка кількість символів після вказаної літери”.
+
+<img width="572" height="87" alt="image" src="https://github.com/user-attachments/assets/0fe7de12-f19f-4492-bcd4-50dc3bdc2e7c" />
+
+Рисунок 7 - Вибірка файлів за першою літерою.
+
+### 2.8 Вибірка файлів із шести символів
+```bash
+ls ??????
+```
+Кожен символ ? відповідає рівно одному символу в назві файлу.
+
+<img width="767" height="559" alt="image" src="https://github.com/user-attachments/assets/215e185f-6dd1-4a89-8f89-30c044cad485" />
+
+Рисунок 8 - Вибірка файлів довжиною 6 символів.
+
+### 2.9 Вибірка файлів за останньою літерою імен
+
+Для імен Yaroslava, Diana, Dasha:
+```bash
+ls *[a]
+```
+Квадратні дужки [ ] дозволяють задати набір символів.
+
+<img width="417" height="245" alt="image" src="https://github.com/user-attachments/assets/307d4058-38cc-4286-97cf-5602e4aaa713" />
+
+Рисунок 9 - Вибірка файлів за останньою літерою.
+
+2.10 Рекурсивний перегляд домашнього каталогу (через конвеєр)
+```bash
+cd ~
+ls -R | sort -r
+```
+Команда | (конвеєр) передає результат однієї команди іншій.
+sort -r виконує сортування у зворотному алфавітному порядку.
+
+<img width="695" height="562" alt="image" src="https://github.com/user-attachments/assets/7e0d59e8-4e46-4e73-a5e4-6e654bf8ee2c" />
+
+Рисунок 10 - Рекурсивний перегляд через конвеєр.
+
+### 2.11 Створення каталогу групи
+```bash
+mkdir BIKS-33
+```
+Команда mkdir створює новий каталог.
+
+<img width="625" height="149" alt="image" src="https://github.com/user-attachments/assets/042f9940-e9a1-4a38-9e8d-74a597e5f8ee" />
+
+Рисунок 11 - Створення каталогу групи.
+
+### 2.12 Перегляд оновленого вмісту домашнього каталогу
+```bash
+ls -r
+```
+Ключ -r відображає список у зворотному алфавітному порядку.
+
+<img width="682" height="100" alt="image" src="https://github.com/user-attachments/assets/bd642307-cb55-4faf-b8f5-7dbbb6784732" />
+
+Рисунок 12 - Оновлений вміст домашнього каталогу.
+
+### 2.13 Створення файлу lab5
+```bash
+cd BIKS-33
+touch lab5
+ls
+```
+Команда touch створює порожній файл.
+
+<img width="480" height="129" alt="image" src="https://github.com/user-attachments/assets/e7f4b544-522e-4b11-acec-649f8d53aab3" />
+
+Рисунок 13 - Створення файлу lab5.
+
+### 2.14 Створення підкаталогів
+```bash
+mkdir surname1 surname2 surname3
+ls
+```
+Команда mkdir підтримує мультиаргументи — можна створити кілька каталогів одночасно.
+
+<img width="734" height="116" alt="image" src="https://github.com/user-attachments/assets/ea1e9beb-4a38-491c-8b93-23e63bc1eb96" />
+
+Рисунок 14 - Створення підкаталогів.
+
