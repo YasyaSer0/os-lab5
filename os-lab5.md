@@ -681,3 +681,102 @@ cd -
 Повертає користувача до попереднього каталогу, у якому він знаходився до останнього переходу.
 
 Ця команда є зручною для швидкого перемикання між двома каталогами.
+
+## Контрольні запитання
+
+### 1. Як переглянути шлях до домашньої директорії користувача за допомогою echo (2 способи)
+```bash
+echo $HOME
+echo ~
+```
+Команда echo $HOME виводить значення змінної середовища HOME, яка містить повний шлях до домашнього каталогу користувача.
+
+Команда echo ~ використовує спеціальний символ ~, який автоматично розгортається у шлях до домашньої директорії.
+
+<img width="434" height="137" alt="image" src="https://github.com/user-attachments/assets/46faf1b2-f6e4-4883-bcc2-b08c52cba69d" />
+
+Рисунок 31 - Перегляд шляху до домашнього каталогу двома способами.
+
+### 2. Чи можна переглянути вміст кореневого каталогу, перебуваючи у домашньому?
+
+Так, можна. Переходити в кореневий каталог не потрібно.
+```bash
+pwd
+ls /
+```
+Команда pwd підтверджує, що користувач знаходиться у домашньому каталозі.
+
+Команда ls / виводить вміст кореневого каталогу незалежно від поточного розташування.
+
+<img width="708" height="234" alt="image" src="https://github.com/user-attachments/assets/bd85e677-2ae4-4ab8-a07e-b78376cec1e4" />
+
+Рисунок 32 - Перегляд вмісту кореневого каталогу без переходу до нього.
+
+### 3. Як додати інформацію в порожній файл?
+```bash
+touch test.txt
+echo "Hello" > test.txt
+echo "World" >> test.txt
+cat test.txt
+```
+- touch створює файл
+- > записує текст у файл (перезаписує вміст)
+- >> додає текст у кінець файлу
+- cat показує вміст файлу
+
+<img width="554" height="157" alt="image" src="https://github.com/user-attachments/assets/ad80d087-e6c9-400a-9166-069b239a539f" />
+
+Рисунок 33 - Запис та додавання інформації у файл.
+
+### 4. Як скопіювати та видалити існуючий каталог? Чи є різниця для непорожнього каталогу?
+```bash
+mkdir testdir
+rmdir testdir
+```
+rmdir видаляє лише порожній каталог.
+```bash
+mkdir testdir
+touch testdir/file.txt
+rm -r testdir
+```
+rm -r видаляє каталог разом із його вмістом.
+
+Різниця:
+- для порожнього каталогу можна використовувати rmdir
+- для непорожнього потрібен ключ -r
+
+<img width="783" height="199" alt="image" src="https://github.com/user-attachments/assets/24d18280-f548-4224-8fd1-aa2df095da77" />
+
+Рисунок 34 - Видалення порожнього та непорожнього каталогу.
+
+### 5. У яких випадках відбувається переміщення, перейменування або обидві дії?
+
+Команда:
+```bash
+mv /work/tech/comp.png /Desktop
+```
+→ лише переміщення
+
+Команда:
+```bash
+mv /work/tech/comp.png /work/tech/my_car.png
+```
+→ лише перейменування
+
+Команда:
+```bash
+mv /work/tech/comp.png /Desktop/computer.png
+```
+→ переміщення + перейменування одночасно
+
+<img width="645" height="173" alt="image" src="https://github.com/user-attachments/assets/1c0f5ee9-349c-4510-8c1d-3b58542c9c07" />
+
+Рисунок 35 - Демонстрація роботи команди mv.
+
+## Conclusion 
+
+During this laboratory work, the basic Linux commands for file system navigation and file/directory management were studied and practiced. I learned how to determine the current working directory, navigate between directories, and view their contents in different formats, including the use of glob patterns for file selection.
+
+Practical skills were developed in creating, copying, moving, renaming, and deleting files and directories, including recursive deletion of non-empty directories. Special attention was given to output redirection using > and >>, as well as working with environment variables.
+
+This laboratory work helped me better understand the structure of the Linux file system and the functionality of the command-line interface. The acquired skills are fundamental and essential for further work with Linux-based operating systems.
