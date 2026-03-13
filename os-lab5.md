@@ -620,6 +620,8 @@ cd /
 
 Після виконання команди поточним каталогом стає /.
 
+<img width="391" height="130" alt="image" src="https://github.com/user-attachments/assets/2793d515-1b1a-4cc6-8354-65af618b8040" />
+
 ### 3.2 Команда cd /home
 
 Команда:
@@ -629,6 +631,8 @@ cd /home
 Здійснює перехід до каталогу /home, у якому зберігаються домашні каталоги користувачів системи.
 
 Це приклад використання абсолютного шляху, оскільки шлях починається з символу /.
+
+<img width="396" height="101" alt="image" src="https://github.com/user-attachments/assets/ec8d7710-edd2-42d6-9e41-fc5287a8075d" />
 
 ### 3.3 Команда cd ~
 
@@ -644,6 +648,8 @@ cd ~
 ```
 У даній роботі це: /home/yaroslava.
 
+<img width="352" height="103" alt="image" src="https://github.com/user-attachments/assets/88076bff-7ae2-42e9-baef-6251cb518343" />
+
 ### 3.4 Команда cd (без аргумента)
 
 Команда:
@@ -652,6 +658,8 @@ cd
 ```
 Також виконує перехід до домашнього каталогу користувача.
 Її дія повністю аналогічна команді cd ~.
+
+<img width="368" height="114" alt="image" src="https://github.com/user-attachments/assets/144373d9-7c39-4a18-a63c-180ff9fcbb9b" />
 
 ### 3.5 Команда cd ..
 
@@ -663,6 +671,8 @@ cd ..
 
 Символ .. означає батьківський каталог.
 
+<img width="407" height="109" alt="image" src="https://github.com/user-attachments/assets/f74aaa27-2f1a-451b-a1dd-6f84eebc471b" />
+
 ### 3.6 Команда cd ../..
 
 Команда:
@@ -671,6 +681,8 @@ cd ../..
 ```
 Дозволяє перейти на два рівні вище по ієрархії каталогів.
 Кожен елемент .. означає підняття на один рівень.
+
+<img width="419" height="112" alt="image" src="https://github.com/user-attachments/assets/19ca24f1-0e3b-48d7-b10d-512aaa3fd810" />
 
 ### 3.7 Команда cd -
 
@@ -681,6 +693,8 @@ cd -
 Повертає користувача до попереднього каталогу, у якому він знаходився до останнього переходу.
 
 Ця команда є зручною для швидкого перемикання між двома каталогами.
+
+<img width="371" height="89" alt="image" src="https://github.com/user-attachments/assets/93bcd3b9-8a78-46dc-9680-0f2a6ec1c0ee" />
 
 ## Контрольні запитання
 
